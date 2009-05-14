@@ -81,9 +81,9 @@ int main(int argc, char **argv) {
   FILE *f = fopen(argv[1], "rb");
   int i;
   if (!f) panic();
-  fread(mem, sizeof(*mem), memory_size, f);
-  for (i = 0; i < memory_size; i++) 
-    mem[i] = ONES(nbits) & htonl(mem[i]);
+  for (i = 0; i < memory_size; i++) {
+    if (EOF == fscanf(f, "%d\n", &mem[i])) break;
+  }
   p = 0;
   go();
   return 0;

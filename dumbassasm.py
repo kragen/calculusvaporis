@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """Assembler for the Dumbass CPU."""
-import sys, struct, re
+import sys, re
 
 def words(fileobj):
     for line in fileobj:
@@ -83,7 +83,7 @@ class Program:
     def dump(self, outfile):
         self.warn_undefined_labels()
         for number in self.memory:
-            outfile.write(struct.pack('>l', number))
+            outfile.write('%d\n' % number)
 
 if __name__ == '__main__':
     import cgitb
