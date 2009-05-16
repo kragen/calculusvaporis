@@ -1,5 +1,5 @@
 #!/usr/bin/python
-"""Assembler for the Dumbass CPU."""
+"""Assembler for the Calculus Vaporis CPU."""
 import sys, re
 
 def words(fileobj):

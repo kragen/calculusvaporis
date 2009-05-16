@@ -16,5 +16,5 @@ main:
         $0 $a1 @ - $tmp ! $a0 @ $tmp @ - $a1 !
         ; $a5 @ $arg1 !                                                        
         ; $0 $output .          # we don't have an output routine yet
-        ; Instead, ./dumbasssim differences.image| grep 'mem\[8]' | head 
+        ; Instead, ./cavosim differences.image| grep 'mem\[8]' | head 
         $0 $main .                                                           

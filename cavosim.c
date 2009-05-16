@@ -9,16 +9,16 @@ enum { nbits = 12, immediate_mask = BIT(nbits-1) };
 #define INSTRUCTION_MASK (ONES(nbits-1) & ~ONES(nbits-4))
 enum instructions { jump = 0, subtract, nand, fetch, store, nop };
 
-typedef int dumbass_word;       /* only use the bottom 12 bits */
+typedef int cavo_word;       /* only use the bottom 12 bits */
 enum { memory_size = BIT(nbits-1) };
-dumbass_word p, a, x, i, tmp, mem[memory_size]; /* CPU registers and memory */
+cavo_word p, a, x, i, tmp, mem[memory_size]; /* CPU registers and memory */
 
 void panic() {
   perror("panicking");
   abort();
 }
 
-void do_store(dumbass_word addr, dumbass_word value) {
+void do_store(cavo_word addr, cavo_word value) {
   printf("mem[%d] ← %d\n", (int)addr, (int)value);
   mem[addr] = value;
 }
