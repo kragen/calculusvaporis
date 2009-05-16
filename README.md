@@ -3,16 +3,19 @@ Calculus Vaporis CPU Design
 
 This is a sketch of a design for a very small zero-operand 12-bit CPU
 in about 1000 NAND gates, or a smaller number of more powerful
-components.  It’s my first CPU design, so it may be deeply flawed.
+components (e.g. 70 lines of C).  It’s my first CPU design, so it may
+be deeply flawed.
 
 Initially I called it the “Dumbass CPU”, but I thought that didn’t
-seem like a name Charles Babbage would have used.
+seem like a name Charles Babbage would have used.  So I called it
+“Calculus Vaporis”, which means “counting-stone of steam” in Latin, I
+hope.
 
 This directory contains a simulator written in C, a few simple
 programs in a simple assembly language, and an assembler written in
 Python.  Run `make` to try them out.
 
-Logical Organization
+nxLogical Organization
 --------------------
 
 The machine has four 12-bit registers: P, A, X, and I.
