@@ -15,7 +15,7 @@ This directory contains a simulator written in C, a few simple
 programs in a simple assembly language, and an assembler written in
 Python.  Run `make` to try them out.
 
-nxLogical Organization
+Logical Organization
 --------------------
 
 The machine has four 12-bit registers: P, A, X, and I.
